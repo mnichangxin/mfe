@@ -48,6 +48,12 @@
 
 [编写可维护的JavaScript](https://book.douban.com/subject/21792530/)
 
+### Node.js
+
+[Node.js开发指南](https://book.douban.com/subject/10789820/)
+[Node.js实战](https://book.douban.com/subject/25870705/)
+[深入浅出Node.js](https://book.douban.com/subject/25768396/)
+
 ### JQuery
 
 [锋利的jQuery](https://book.douban.com/subject/10792216/)
