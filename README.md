@@ -4,4 +4,4 @@
 
 ## 概述
 
-[前端工程师技能图谱](../images/stuq-fe.jpg)
+[前端工程师技能图谱](https://raw.githubusercontent.com/mnichangxin/mfe/master/images/stuq-fe.jpg)
