@@ -25,3 +25,5 @@
 [2019 字节跳动前端社招面经（二）](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F%EF%BC%88%E4%BA%8C%EF%BC%89.md)
 
 [2019 搜狐前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E6%90%9C%E7%8B%90%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
+
+[2019 小米前端社招面经]()
