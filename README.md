@@ -27,3 +27,5 @@
 [2019 搜狐前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E6%90%9C%E7%8B%90%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
 
 [2019 小米前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E5%B0%8F%E7%B1%B3%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
+
+[2019 猿辅导前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
