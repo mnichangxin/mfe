@@ -20,17 +20,47 @@
 
 ### Web 前端部分
 
+这里主要挑一些比较常问的点，逐步剖析。
+
 #### HTML/CSS
 
 1. 对 Web 语义化的理解
 
-从 HTML 语义化和 CSS 语义化两方面回答：
+从 `HTML` 语义化和 `CSS` 语义化两方面回答：
 
 * HTML 语义化：`HTML` 为网页文档内容提供上下文结构和含义。对于 `HTML` 体系而言，`Web` 语义化是指使用语义恰当的标签，使页面有良好的结构，让页面元素有含义，便于被浏览器、搜索引擎解析、利于 `SEO`。通常我们所说的 `HTML` 应该是完全脱离表现信息的，其中的标签应该都是语义化地定义了文档的结构。
 
 * CSS 语义化：`CSS` 语义就是 `class` 和 `id` 命名的语义。`class` 属性作为 `HTML` 与`CSS` 衔接的纽带，其本意是用来描述元素内容的。指用易于理解的名称对 `html` 标签附加的 `class`或 `id` 命名。良好的 `CSS` 命名方式减少沟通调试成本，易于理解。
 
-2. CSS 选择器的优先级、继承、层叠
+2. `<!Doctype html>` 的作用，严格模式和混杂模式
+
+`<!Doctype html>` 是 `HTML5` 的文档声明。浏览器解析时到底使用严格模式还是混杂模式，与网页中的 DTD 直接相关。`HTML5` 中没有了 `DTD`，所以两者也没了区别，文档声明也简化成了`<!Doctype html>`。
+
+3. 有哪些常见的 meta 标签
+
+* `http-equiv` 属性：`<meta http-equiv='参数' content='参数变量值'>`：
+
+```html
+    1. <meta http-equiv=”Set-Cookie” content=”cookievalue=xxx; expires=Friday,12-Jan-2001 18:18:18 GMT; path=/”> // 如果网页过期，那么存盘的cookie将被删除。必须使用GMT的时间格式
+    2. <meta http-equiv='expires' content='时间'> // 用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输
+    3. <meta http-equiv=”Refresh” content=”5;URL”> // 告诉浏览器在【数字】秒后跳转到【一个网址】
+    4. <meta http-equiv=”content-Type” content=”text/html; charset=utf-8″> // 设定页面使用的字符集
+    <meta charset=”utf-8″> // 在HTML5中设定字符集的简写写法
+    5. <meta http-equiv=”Pragma” content=”no-cache”> // 禁止浏览器从本地计算机的缓存中访问页面内容。访问者将无法脱机浏览
+    6. <meta http-equiv=”Window-target” content=”_top”> // 用来防止别人在iframe(框架)里调用自己的页面
+    7. <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'> // 强制浏览器按照特定的版本标准进行渲染。但不支持IE7及以下版本。如果是ie浏览器就用最新的ie渲染，如果是双核浏览器就用chrome内核
+```
+* name 属性：`<meta name='参数' content='具体的参数值'>`：
+
+```html
+    1. <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no”> // 在移动设备浏览器上，禁用缩放（zooming）功能，用户只能滚动屏幕
+    2. <meta name=”description” content=””> // 告诉搜索引擎，当前页面的主要内容是xxx
+    3. <meta name=”keywords” content=””> // 告诉搜索引擎，当前页面的关键字。
+    4. <meta name=”author” content=””> // 告诉搜索引擎，标注网站作者
+    5. <meta name=”copyright” content=””> // 标注网站的版权信息
+```
+
+4. CSS 选择器的优先级、继承、层叠
 
 * 通配选择符的权值：`0, 0, 0, 0`
 * 标签的权值：`0, 0, 0, 1`
@@ -41,28 +71,30 @@
 * id 的权值：`0, 1, 0, 0`
 * important 的权值：`1, 0, 0, 0`
 
-公式：`important > 内联 > ID > 类 > 标签 | 伪类 | 属性选择器 > 伪对象 > 通配符 > 继承`
+记住这个公式：`important > 内联 > ID > 类 > 标签 | 伪类 | 属性选择器 > 伪对象 > 通配符 > 继承`
 
-3. CSS 实现 div 水平垂直居中
+5. CSS 实现 div 水平垂直居中
+
+基本从这几方面回答：
 
 * 已知高度和宽度，绝对定位和负边距
 * 未知高度或宽度，设置为内联元素并水平垂直居中
 * CSS3 transform 属性
 * Flex 布局
 
-4. CSS 中 margin 属性的合并问题
+6. CSS 中 margin 属性的合并问题
 
 * 父元素的上外边距和第一个子元素的上外边距
 * 父元素的下外边距和最后一个子元素的下外边距
 * 自己的上外边距会和自己的下外边距合并
 
-5. CSS 清除浮动的方式
+7. CSS 清除浮动的方式
 
 * 容器元素闭合标签前添加额外元素并设置 `clear: both`
 * 父元素触发块级格式化上下文（BFC）
 * 设置容器元素伪元素并设置 `clear: both`
 
-6. CSS 创建 BFC 的方式
+8. CSS 创建 BFC 的方式
 
 * 根元素
 * 浮动元素（确切的说除了 `none` 以外的值）
@@ -71,6 +103,53 @@
 * overflow 不为 `visible` 的块盒
 
 #### JavaScript/Node.js
+
+##### 数据类型
+
+1. 基本数据类型和复杂数据类型有哪些
+
+基本数据类型：`number`、`boolean`、`string`、`undifined`、`null`、`symbol`（ES6 新增）
+复杂数据类型：`Object`
+
+2. 数据类型的检测方式
+
+最保险的方法 `Object.prototype.toString`，当 `toString` 被调用时：
+
+* 如果 `this` 值是 `undefined`，就返回 `[object Undefined]`
+* 如果 `this` 的值是 `null`，就返回 `[object Null]`
+* 让 `O` 成为 `ToObject(this)` 的结果
+* 让 `class` 成为 `O` 的内部属性 `[[Class]]` 的值
+* 最后返回由 `'[object' ` 和 `class` 和 `']'` 三个部分组成的字符串
+
+```js
+    var class2type = {}
+    // 生成 class2type 映射
+    'Boolean Number String Function Array Date RegExp Object Error Null Undefined'.split(' ').map(function(item, index) {
+        class2type['[object ' + item + ']'] = item.toLowerCase()
+    })
+    function getType(O) {
+        return typeof O === 'object' || typeof O === 'function'
+        ?
+        class2type[Object.prototype.toString.call(O)] || 'object'
+        :
+        typeof O
+    }
+```
+
+3. ['1', '2', '3'].map(parseInt) 的输出结果
+
+`parseInt` 接收两个参数：`map` 函数的 `item` 和 `index`。即：
+
+```js
+    parseInt('1', 0) -> 1 // radix 为 10 进制
+    parseInt('2', 1) -> NaN // radix 不在 2~36 之间
+    parseInt('3', 2) -> NaN // 2 进制没有 3，只有 0 和 1
+```
+输出结果为：`1, NaN, NaN`
+
+##### 原型和继承
+
+##### DOM 相关
 
 #### React
 
