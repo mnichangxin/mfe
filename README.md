@@ -2,19 +2,15 @@
 
 **更多内容在整理中，敬请期待**
 
-## 概述
+## 大前端技术栈
 
-[前端工程师技能图谱](https://raw.githubusercontent.com/mnichangxin/mfe/master/images/stuq-fe.jpg)
+### Web 前端部分
 
-## 前端推荐书目
+### Android 部分
 
-[前端书籍整理](https://github.com/mnichangxin/mfe/tree/master/book)
+## 面试指南
 
-## 经典面试题
-
-[经典面试题](https://github.com/mnichangxin/mfe/blob/master/experience/%E5%89%8D%E7%AB%AF%E7%BB%8F%E5%85%B8%E9%9D%A2%E8%AF%95%E9%A2%98.md)
-
-## 面经
+### 面经
 
 记录了笔者的校招面试和正式工作后的社招面试：
 
