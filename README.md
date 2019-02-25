@@ -151,6 +151,11 @@
 
 ##### DOM 相关
 
+1. 事件处理对象中 `e.target` 和 `e.currentTarget` 的区别
+
+* `e.target` 指向真正触发事件监听的对象
+* `e.currentTarget` 指向添加事件监听的对象
+
 #### React
 
 #### Vue
