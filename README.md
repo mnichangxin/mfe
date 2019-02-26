@@ -104,8 +104,6 @@
 
 #### JavaScript/Node.js
 
-##### 数据类型
-
 1. 基本数据类型和复杂数据类型有哪些
 
 基本数据类型：`number`、`boolean`、`string`、`undifined`、`null`、`symbol`（ES6 新增）
@@ -147,16 +145,24 @@
 ```
 输出结果为：`1, NaN, NaN`
 
-##### 原型和继承
-
-##### DOM 相关
-
-1. 事件处理对象中 `e.target` 和 `e.currentTarget` 的区别
+5. 事件处理对象中 `e.target` 和 `e.currentTarget` 的区别
 
 * `e.target` 指向真正触发事件监听的对象
 * `e.currentTarget` 指向添加事件监听的对象
 
+6. XSS 和 CSRF 的区别，如何防范
+
+[XSS 和 CSRF](https://juejin.im/post/5c6d142151882503b3271f4b)
+
+7. CommonJS 和 ES Module 区别
+
+* CommonJS 运行时确定依赖关系，ES Module 编译时确定依赖关系
+* CommonJS 加载文件全部模块为对象，ES Module 只加载所需的模块
+* CommonJS 输出的是值的拷贝，ES Module 输出的是值的引用
+
 #### React
+
+1. React 组件间通信方式
 
 #### Vue
 
@@ -177,3 +183,5 @@
 [2019 小米前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E5%B0%8F%E7%B1%B3%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
 
 [2019 猿辅导前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E7%8C%BF%E8%BE%85%E5%AF%BC%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
+
+[2019 蚂蚁金服前端社招面经]()
