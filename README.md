@@ -160,6 +160,23 @@
 * `CommonJS` 加载文件全部模块为对象，`ES Module` 只加载所需的模块
 * `CommonJS` 输出的是值的拷贝，`ES Module` 输出的是值的引用
 
+8. JavaScript 事件循环原理
+
+在事件循环中，每进行一次循环操作称为 `tick`，每一次 `tick` 的任务处理模型是比较复杂的，但关键步骤如下：
+
+* 在此次 `tick` 中选择最先进入队列的任务(`oldest task`)，如果有则执行(一次)
+* 检查是否存在 `Microtasks`，如果存在则不停地执行，直至清空 `Microtasks Queue`
+* 更新 `render`
+* 主线程重复执行上述步骤
+
+* `(macro)task` 主要包含：`script`(整体代码)、`setTimeout`、`setInterval`、`I/O`、`UI交互事件`、`postMessage`、`MessageChannel`、`setImmediate`(`Node.js` 环境)
+* `microtask`主要包含：`Promise.then`、`MutaionObserver`、`process.nextTick`(`Node.js` 环境)
+
+9. Promise all 方法和 race 方法区别
+
+* `Promise.all`: 当所有的子 `Promise` 都完成，该 `Promise` 完成，返回值是全部值的数组；如果有任何一个失败，该 `Promise` 失败，返回值是第一个失败的子 `Promise` 的结果
+* `Promise.race`: 当有一个子 `Promise` 都完成，该 `Promise` 完成
+
 #### React
 
 1. `React` 组件间通信方式
@@ -169,6 +186,21 @@
 * 子传子：一子组件向父组件传递，父组件再向另一子组件传递
 
 #### Vue
+
+1. 对 `MVVM` 的理解
+
+在 `MVVM` 架构下，`View` 和 `Model` 之间并没有直接的联系，而是通过 `ViewModel` 进行交互，`Model` 和 `ViewModel` 之间的交互是双向的，因此 `View` 数据的变化会同步到 `Model`中，而 `Model` 数据的变化也会立即反应到 `View` 上
+
+2. `Vue` 响应式原理（双向数据绑定原理）
+
+* 数据劫持：`Vue` 数据双向绑定采用数据劫持结合 `发布者-订阅者模式` 的方式，通过`Object.defineProperty()` 来劫持各个属性的 `setter`，`getter`，在数据变动时发布消息给订阅者，触发相应监听回调。当把一个普通 `Javascript` 对象传给 `Vue` 实例来作为它的 `data` 选项时，`Vue` 将遍历它的属性，用 `Object.definePropert()` 将它们转为 `getter/setter`
+* 源码分析：`Vue` 的数据双向绑定将 `MVVM` 作为数据绑定的入口，整合 `Observer`，`Compile` 和 `Watcher` 三者，通过 `Observer` 来监听自己的 `Model` 的数据变化，通过`Compile` 来解析编译模板指令，最终利用 `Watcher` 搭起 `Observer` 和 `Compile` 之间的通信桥梁，达到 `数据变化 —> 视图更新`；`视图交互变化（input） —> 数据 Model变更` 双向绑定效果
+
+#### HTTP/HTTPS
+
+1. HTTPS 密钥交换原理
+
+
 
 #### 工具相关
 
