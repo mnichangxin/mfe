@@ -228,3 +228,5 @@
 [2019 美菜网前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E7%BE%8E%E8%8F%9C%E7%BD%91%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
 
 [2019 58同城前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%2058%E5%90%8C%E5%9F%8E%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
+
+[2019 快看漫画前端社招面经](https://github.com/mnichangxin/mfe/blob/master/experience/2019%E5%BF%AB%E7%9C%8B%E6%BC%AB%E7%94%BB%E5%89%8D%E7%AB%AF%E7%A4%BE%E6%8B%9B%E9%9D%A2%E7%BB%8F.md)
