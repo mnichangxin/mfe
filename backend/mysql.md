@@ -43,11 +43,15 @@ InnoDB:
 
 其他:
 通常会在 WHERE、JOIN ON 和 ORDER BY 使用到字段上加上索引。
-避免查询时判断 NULL，否则可能会导致全表扫描。
-避免使用 OR 来连接查询条件，否则可能导致全表扫描，可以改用 UNION 或 UNION ALL。
-避免 LIKE 查询，否则可能导致全表扫描。
+避免在 where 子句中对字段进行表达式操作/函数操作, 比如 `num/2=100`, `substring(name,1,3)='abc'`,
 不使用 SELECT \*，只查询必须的字段，避免加载无用数据。
 能用 UNION ALL 的时候就不用 UNION，UNION 过滤重复数据要耗费更多的 cpu 资源。
+
+可能会导致全表扫描:
+避免查询时判断 NULL
+应尽量避免在 where 子句中使用!=或<>操作符，可以改用<，<=，=，>，>=，BETWEEN
+避免 LIKE 查询, 可以首位 match'abc%' 代替'%abc%'
+避免使用 OR 来连接查询条件，可以改用 UNION 或 UNION ALL。
 
 ## b+tree 的优点：
 
